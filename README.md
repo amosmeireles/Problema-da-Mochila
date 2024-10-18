@@ -17,11 +17,17 @@ Implementação em Python:
 
 ## Bibliotecas utilizadas:
 numpy e pandas: Manipulação de dados financeiros.
-scipy.optimize: Resolver o problema de otimização.
-matplotlib e seaborn: Visualização dos resultados.
-yfinance: Coleta de dados financeiros de ativos via API do Yahoo Finanças.
-Visualização dos Resultados:
 
-## Fronteira eficiente: Um gráfico que mostra o equilíbrio entre retorno e risco.
+scipy.optimize: Resolver o problema de otimização.
+
+matplotlib e seaborn: Visualização dos resultados.
+
+yfinance: Coleta de dados financeiros de ativos via API do Yahoo Finanças.
+
+##Visualização dos Resultados:
+
+Fronteira eficiente: Um gráfico que mostra o equilíbrio entre retorno e risco.
+
 Distribuição de Ativos: Gráfico de pizza ou barras para ilustrar a alocação dos ativos.
+
 Evolução do Retorno e Risco: Gráficos que mostram a evolução dos retornos e do risco ao longo do tempo.
