@@ -30,17 +30,17 @@ Cálculo dos Retornos Diários: A variação percentual do preço dos ativos ent
 3. Modelagem da Carteira
 A carteira de investimentos é modelada com base na alocação de pesos 𝑤𝑖 para cada ativo. Esses pesos representam a fração do capital alocada em cada ativo, e a soma desses pesos deve ser igual a 1 (ou 100%).
 
-.Retorno Esperado da Carteira: O retorno da carteira é calculado como uma média ponderada dos retornos diários dos ativos, de acordo com os pesos alocados a cada ativo. Isso é feito pela operação de produto  de matrizes entre a matriz de retornos e o vetor de alocação de pesos.
+Retorno Esperado da Carteira: O retorno da carteira é calculado como uma média ponderada dos retornos diários dos ativos, de acordo com os pesos alocados a cada ativo. Isso é feito pela operação de produto  de matrizes entre a matriz de retornos e o vetor de alocação de pesos.
 ![image](https://github.com/user-attachments/assets/5ff65ba3-ff69-4758-99f5-c65fc01bfae5)
 
-.Risco (Volatilidade) da Carteira: O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão    dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
+Risco (Volatilidade) da Carteira: O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão    dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
 ![image](https://github.com/user-attachments/assets/c1bee81a-2ad6-44c4-a5c4-494158d3ae62)
 
 4. Função de Otimização
 A otimização da carteira tem como objetivo encontrar a combinação de pesos 𝑤𝑖 que maximiza o retorno esperado, enquanto respeita a restrição de risco (volatilidade máxima).
 Para isso, o algoritmo de otimização é implementado usando a função minimize() da biblioteca scipy.optimize. Esta função busca minimizar o risco da carteira dado um nível de retorno esperado, ou vice-versa.
   
-.Função Objetivo: A função objetivo pode ser definida para maximizar o retorno ou minimizar o risco da carteira, utilizando o produto entre os retornos diários e a alocação de pesos para calcular o retorno   esperado e a volatilidade da carteira.
+Função Objetivo: A função objetivo pode ser definida para maximizar o retorno ou minimizar o risco da carteira, utilizando o produto entre os retornos diários e a alocação de pesos para calcular o retorno   esperado e a volatilidade da carteira.
 
 5. Visualização dos Resultados
 Após a otimização, diferentes gráficos são gerados para permitir uma análise visual clara dos resultados da carteira otimizada:
