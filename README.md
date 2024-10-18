@@ -6,12 +6,28 @@ Este projeto tem como objetivo implementar um algoritmo de otimização para con
 A otimização utiliza a volatilidade como modelo de medição de risco de forma a selecionar os melhores ativos que otimizam a relação risco-retorno.
   
 ## Abordagem Utilizada para a Otimização
-1. Dados e Retornos
-Primeiramente, os dados dos ativos financeiros são coletados via a API do Yahoo Finanças usando a biblioteca yfinance. Esses dados incluem o preço histórico dos ativos selecionados, que são necessários para  calcular os retornos.
+1. Modelagem Matemática
+A modelagem segue os seguintes passos:
+
+Itens como Ativos Financeiros: Cada ativo financeiro (ação, fundo, etc.) é tratado como um item no problema da mochila. Os dois principais atributos do ativo são:
+
+Retorno Esperado: Equivalente ao valor do item no problema da mochila, que é o benefício que o ativo traz para a carteira.
+
+Risco (Volatilidade): Análogo ao peso do item. O risco representa a incerteza associada ao retorno desse ativo. Foi medido utilizando a volatilidade.
+
+Capacidade da Mochila (Limite de Risco): O limite de risco é definido pela volatilidade máxima que a carteira pode assumir. Isso é equivalente à capacidade máxima da mochila no problema clássico. Esse valor pode ser ajustado de acordo com o perfil de risco do investidor.
+
+Objetivo de Otimização: O objetivo é maximizar o retorno total da carteira enquanto se respeita a restrição de risco. A formulação matemática básica é a seguinte:
+
+![image](https://github.com/user-attachments/assets/b587e2b9-af7f-41f1-83b0-78ca5396c92a)
+
+
+2. Dados e Retornos
+Os dados dos ativos financeiros são coletados via a API do Yahoo Finanças usando a biblioteca yfinance. Esses dados incluem o preço histórico dos ativos selecionados, que são necessários para  calcular os retornos.
 
 Cálculo dos Retornos Diários: A variação percentual do preço dos ativos entre os dias consecutivos foi calculada para determinar os retornos diários. Isso é feito com a função pct_change() da biblioteca      pandas, que calcula a variação percentual entre valores consecutivos de uma série.
 
-2. Modelagem da Carteira
+3. Modelagem da Carteira
 A carteira de investimentos é modelada com base na alocação de pesos 𝑤𝑖 para cada ativo. Esses pesos representam a fração do capital alocada em cada ativo, e a soma desses pesos deve ser igual a 1 (ou 100%).
 
 .Retorno Esperado da Carteira: O retorno da carteira é calculado como uma média ponderada dos retornos diários dos ativos, de acordo com os pesos alocados a cada ativo. Isso é feito pela operação de produto  de matrizes entre a matriz de retornos e o vetor de alocação de pesos.
@@ -20,13 +36,13 @@ A carteira de investimentos é modelada com base na alocação de pesos 𝑤𝑖
 .Risco (Volatilidade) da Carteira: O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão    dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
 ![image](https://github.com/user-attachments/assets/c1bee81a-2ad6-44c4-a5c4-494158d3ae62)
 
-3. Função de Otimização
+4. Função de Otimização
 A otimização da carteira tem como objetivo encontrar a combinação de pesos 𝑤𝑖 que maximiza o retorno esperado, enquanto respeita a restrição de risco (volatilidade máxima).
 Para isso, o algoritmo de otimização é implementado usando a função minimize() da biblioteca scipy.optimize. Esta função busca minimizar o risco da carteira dado um nível de retorno esperado, ou vice-versa.
   
 .Função Objetivo: A função objetivo pode ser definida para maximizar o retorno ou minimizar o risco da carteira, utilizando o produto entre os retornos diários e a alocação de pesos para calcular o retorno   esperado e a volatilidade da carteira.
 
-4. Visualização dos Resultados
+5. Visualização dos Resultados
 Após a otimização, diferentes gráficos são gerados para permitir uma análise visual clara dos resultados da carteira otimizada:
   
 Fronteira Eficiente: Um gráfico que mostra a relação entre o retorno esperado e o risco para diferentes combinações de ativos, destacando as carteiras mais eficientes para cada nível de risco.
