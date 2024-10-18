@@ -57,7 +57,7 @@ Volatilidade Rolante: A volatilidade (risco) da carteira é calculada para janel
 ## Instruções de Instalação e Execução
 Este projeto foi desenvolvido utilizando o Google Colab, uma plataforma online gratuita que permite a execução de código Python em notebooks de forma interativa. Abaixo estão os passos detalhados para abrir  e executar o código:
 
-Passos para Acessar o Projeto:
+**Passos para Acessar o Projeto:**
 
 1. Acesse o Repositório no GitHub:
 No GitHub, navegue até a pasta que contém o arquivo Problema_da_mochila.ipynb.
