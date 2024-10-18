@@ -2,7 +2,7 @@
 # Codigo da turma: 962-94349
 # Nome: Amós Meireles Diniz, Matricula: 2021101198
 # Objetivo do Trabalho
-  Este projeto tem como objetivo implementar um algoritmo de otimização para construção de uma carteira de investimentos baseado no problema da mochila. O objetivo principal é maximizar o retorno esperado de uma    carteira de ativos financeiros, respeitando um limite de risco aceitável (equivalente à capacidade da mochila).
+  Este projeto tem como objetivo implementar um algoritmo de otimização para construção de uma carteira de investimentos baseado no problema da mochila. O objetivo principal é maximizar o retorno esperado de    uma carteira de ativos financeiros, respeitando um limite de risco aceitável (equivalente à capacidade da mochila).
   A otimização utiliza a volatilidade como modelo de medição de risco de forma a selecionar os melhores ativos que otimizam a relação risco-retorno.
   
 ## Abordagem Utilizada para a Otimização
@@ -10,12 +10,11 @@
 Primeiramente, os dados dos ativos financeiros são coletados via a API do Yahoo Finanças usando a biblioteca yfinance. Esses dados incluem o preço histórico dos ativos selecionados, que são necessários para calcular os retornos.
 
 Cálculo dos Retornos Diários: A variação percentual do preço dos ativos entre os dias consecutivos foi calculada para determinar os retornos diários. Isso é feito com a função pct_change() da biblioteca pandas, que calcula a variação percentual entre valores consecutivos de uma série.
+
 2. Modelagem da Carteira
 A carteira de investimentos é modelada com base na alocação de pesos 
-𝑤
-𝑖
-w 
-i
+![image](https://github.com/user-attachments/assets/5ff65ba3-ff69-4758-99f5-c65fc01bfae5)
+
 ​
   para cada ativo. Esses pesos representam a fração do capital alocada em cada ativo, e a soma desses pesos deve ser igual a 1 (ou 100%).
 
