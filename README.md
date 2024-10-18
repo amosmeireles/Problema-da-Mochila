@@ -8,14 +8,17 @@
 # Abordagem Utilizada para a Otimização
 A otimização foi implementada em três etapas:
 
-Modelagem Matemática:
+## Modelagem Matemática:
 
-## Ativos Financeiros: Os ativos são modelados como itens no problema da mochila, onde o retorno esperado é análogo ao valor e o risco ao peso.
+Ativos Financeiros: Os ativos são modelados como itens no problema da mochila, onde o retorno esperado é análogo ao valor e o risco ao peso.
+
 Capacidade da Mochila: Define o limite máximo de risco tolerado na carteira.
-Objetivo: Maximizar o retorno total da carteira, garantindo que o risco (volatilidade ou VaR/CVaR) permaneça dentro de um limite estabelecido.
-Implementação em Python:
 
-## Bibliotecas utilizadas:
+Objetivo: Maximizar o retorno total da carteira, garantindo que o risco (volatilidade ou VaR/CVaR) permaneça dentro de um limite estabelecido.
+
+## Implementação em Python:
+
+Bibliotecas utilizadas:
 numpy e pandas: Manipulação de dados financeiros.
 
 scipy.optimize: Resolver o problema de otimização.
