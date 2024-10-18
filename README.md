@@ -24,7 +24,7 @@ matplotlib e seaborn: Visualização dos resultados.
 
 yfinance: Coleta de dados financeiros de ativos via API do Yahoo Finanças.
 
-##Visualização dos Resultados:
+## Visualização dos Resultados:
 
 Fronteira eficiente: Um gráfico que mostra o equilíbrio entre retorno e risco.
 
