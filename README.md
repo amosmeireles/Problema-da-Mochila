@@ -5,35 +5,95 @@
   Este projeto tem como objetivo implementar um algoritmo de otimização para construção de uma carteira de investimentos baseado no problema da mochila. O objetivo principal é maximizar o retorno esperado de uma    carteira de ativos financeiros, respeitando um limite de risco aceitável (equivalente à capacidade da mochila).
   A otimização utiliza a volatilidade como modelo de medição de risco de forma a selecionar os melhores ativos que otimizam a relação risco-retorno.
   
-# Abordagem Utilizada para a Otimização
-A otimização foi implementada em três etapas:
+## Abordagem Utilizada para a Otimização
+1. Dados e Retornos
+Primeiramente, os dados dos ativos financeiros são coletados via a API do Yahoo Finanças usando a biblioteca yfinance. Esses dados incluem o preço histórico dos ativos selecionados, que são necessários para calcular os retornos.
 
-## Modelagem Matemática:
+Cálculo dos Retornos Diários: A variação percentual do preço dos ativos entre os dias consecutivos foi calculada para determinar os retornos diários. Isso é feito com a função pct_change() da biblioteca pandas, que calcula a variação percentual entre valores consecutivos de uma série.
+2. Modelagem da Carteira
+A carteira de investimentos é modelada com base na alocação de pesos 
+𝑤
+𝑖
+w 
+i
+​
+  para cada ativo. Esses pesos representam a fração do capital alocada em cada ativo, e a soma desses pesos deve ser igual a 1 (ou 100%).
 
-Ativos Financeiros: Os ativos são modelados como itens no problema da mochila, onde o retorno esperado é análogo ao valor e o risco ao peso.
+Retorno Esperado da Carteira: O retorno da carteira é calculado como uma média ponderada dos retornos diários dos ativos, de acordo com os pesos alocados a cada ativo. Isso é feito pela operação de produto de matrizes entre a matriz de retornos e o vetor de alocação de pesos.
 
-Capacidade da Mochila: Define o limite máximo de risco tolerado na carteira.
+𝑅
+carteira
+=
+∑
+𝑖
+=
+1
+𝑛
+𝑤
+𝑖
+⋅
+𝑟
+𝑖
+R 
+carteira
+​
+ = 
+i=1
+∑
+n
+​
+ w 
+i
+​
+ ⋅r 
+i
+​
+ 
+Risco (Volatilidade) da Carteira: O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
 
-Objetivo: Maximizar o retorno total da carteira, garantindo que o risco (volatilidade ou VaR/CVaR) permaneça dentro de um limite estabelecido.
+𝜎
+carteira
+=
+std
+(
+𝑅
+carteira
+)
+×
+252
+σ 
+carteira
+​
+ =std(R 
+carteira
+​
+ )× 
+252
+​
+ 
+3. Função de Otimização
+A otimização da carteira tem como objetivo encontrar a combinação de pesos 
+𝑤
+𝑖
+w 
+i
+​
+  que maximiza o retorno esperado, enquanto respeita a restrição de risco (volatilidade máxima).
 
-## Implementação em Python:
+Para isso, o algoritmo de otimização é implementado usando a função minimize() da biblioteca scipy.optimize. Esta função busca minimizar o risco da carteira dado um nível de retorno esperado, ou vice-versa.
 
-Bibliotecas utilizadas:
-numpy e pandas: Manipulação de dados financeiros.
+Função Objetivo: A função objetivo pode ser definida para maximizar o retorno ou minimizar o risco da carteira, utilizando o produto entre os retornos diários e a alocação de pesos para calcular o retorno esperado e a volatilidade da carteira.
+4. Visualização dos Resultados
+Após a otimização, diferentes gráficos são gerados para permitir uma análise visual clara dos resultados da carteira otimizada:
 
-scipy.optimize: Resolver o problema de otimização.
+Fronteira Eficiente: Um gráfico que mostra a relação entre o retorno esperado e o risco para diferentes combinações de ativos, destacando as carteiras mais eficientes para cada nível de risco.
 
-matplotlib e seaborn: Visualização dos resultados.
+Distribuição de Ativos: Um gráfico de pizza (ou barras) exibe a proporção alocada em cada ativo, com base nos pesos calculados pelo algoritmo de otimização.
 
-yfinance: Coleta de dados financeiros de ativos via API do Yahoo Finanças.
+Evolução do Retorno e Risco: A evolução dos retornos e do risco da carteira é mostrada em um gráfico de linha. Isso inclui:
 
-## Visualização dos Resultados:
-
-Fronteira eficiente: Um gráfico que mostra o equilíbrio entre retorno e risco.
-
-Distribuição de Ativos: Gráfico de pizza ou barras para ilustrar a alocação dos ativos.
-
-Evolução do Retorno e Risco: Gráficos que mostram a evolução dos retornos e do risco ao longo do tempo.
+Retorno Cumulativo: Calculado com base no crescimento dos retornos da carteira ao longo do tempo.
+Volatilidade Rolante: A volatilidade (risco) da carteira é calculada para janelas móveis de 21 dias, permitindo observar como o risco varia ao longo do tempo.
 
 ## Instruções de Instalação e Execução
 Este projeto foi desenvolvido utilizando o Google Colab, uma plataforma online gratuita que permite a execução de código Python em notebooks de forma interativa. Abaixo estão os passos detalhados para abrir e executar o código:
