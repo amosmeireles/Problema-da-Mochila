@@ -50,17 +50,38 @@ Para isso, o algoritmo de otimização é implementado usando a função minimiz
 Após a otimização, diferentes gráficos são gerados para permitir uma análise visual clara dos resultados da carteira otimizada:
   
 **Fronteira Eficiente:** Um gráfico que mostra a relação entre o retorno esperado e o risco para diferentes combinações de ativos, destacando as carteiras mais eficientes para cada nível de risco.
- 
+
+ **Codigo utilizado para fazer o grafico de Distribuição de Ativos:** 
+
+![image](https://github.com/user-attachments/assets/94582352-af2e-4d21-a8c4-96a503cb2cbf)
+
  **Resultado do grafico Fronteira Eficiente apresentado pelo codigo funcionando:**
 
 ![image](https://github.com/user-attachments/assets/a071408b-1047-4eff-b5e7-7791c9956a80)
 
 **Distribuição de Ativos:** Um gráfico de pizza (ou barras) exibe a proporção alocada em cada ativo, com base nos pesos calculados pelo algoritmo de otimização.
+
+ **Codigo utilizado para fazer o grafico de Distribuição de Ativos:** 
+
+![image](https://github.com/user-attachments/assets/6ffe89ba-a086-4759-82cc-c72ba31df2ef)
+
+  **Resultado do grafico Distribuição de Ativos apresentado pelo codigo funcionando:**
+
+  ![image](https://github.com/user-attachments/assets/68230884-8127-499d-b6b2-4c1c905c4181)
+
   
 **Evolução do Retorno e Risco:** A evolução dos retornos e do risco da carteira é mostrada em um gráfico de linha. Isso inclui:
   
 **Retorno Cumulativo:** Calculado com base no crescimento dos retornos da carteira ao longo do tempo.
-Volatilidade Rolante: A volatilidade (risco) da carteira é calculada para janelas móveis de 21 dias, permitindo observar como o risco varia ao longo do tempo.
+**Volatilidade Rolante:** A volatilidade (risco) da carteira é calculada para janelas móveis de 21 dias, permitindo observar como o risco varia ao longo do tempo.
+
+ **Codigo utilizado para fazer o grafico de Evolução do Retorno e Risco:** 
+
+![image](https://github.com/user-attachments/assets/b3a1e088-8501-4844-bb51-bb0583cba492)
+
+ **Resultado do grafico Evolução do Retorno e Risco apresentado pelo codigo funcionando:**
+ 
+![image](https://github.com/user-attachments/assets/227f85b4-1664-4146-a12f-8149a06428f3)
 
 ## Instruções de Instalação e Execução
 Este projeto foi desenvolvido utilizando o Google Colab, uma plataforma online gratuita que permite a execução de código Python em notebooks de forma interativa. Abaixo estão os passos detalhados para abrir  e executar o código:
