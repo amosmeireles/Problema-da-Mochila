@@ -65,7 +65,7 @@ Bibliotecas Necessárias: O código instala automaticamente as bibliotecas neces
 ## Personalização e Alteração
 Se desejar realizar alterações no código ou ajustar parâmetros, como a lista de ativos financeiros ou o limite de risco, basta editar as células relevantes no notebook diretamente no Google Colab. Em seguida, execute novamente as células para ver os resultados atualizados.
 
-##Dicas
+## Dicas
 Salvar uma Cópia: Para salvar uma cópia do notebook com suas alterações, vá em Arquivo > Salvar uma cópia no Drive, assim você poderá manter suas mudanças no seu próprio Google Drive.
 
 Download do Notebook: Você também pode baixar o notebook como um arquivo .ipynb para rodá-lo localmente, caso tenha um ambiente Python configurado em sua máquina.
