@@ -7,17 +7,18 @@
   
 ## Abordagem Utilizada para a Otimização
 1. Dados e Retornos
-Primeiramente, os dados dos ativos financeiros são coletados via a API do Yahoo Finanças usando a biblioteca yfinance. Esses dados incluem o preço histórico dos ativos selecionados, que são necessários para calcular os retornos.
+  Primeiramente, os dados dos ativos financeiros são coletados via a API do Yahoo Finanças usando a biblioteca yfinance. Esses dados incluem o preço histórico dos ativos selecionados, que são necessários para   calcular os retornos.
 
-Cálculo dos Retornos Diários: A variação percentual do preço dos ativos entre os dias consecutivos foi calculada para determinar os retornos diários. Isso é feito com a função pct_change() da biblioteca pandas, que calcula a variação percentual entre valores consecutivos de uma série.
+  Cálculo dos Retornos Diários: A variação percentual do preço dos ativos entre os dias consecutivos foi calculada para determinar os retornos diários. Isso é feito com a função pct_change() da biblioteca        pandas, que calcula a variação percentual entre valores consecutivos de uma série.
 
 2. Modelagem da Carteira
-A carteira de investimentos é modelada com base na alocação de pesos 𝑤𝑖 para cada ativo. Esses pesos representam a fração do capital alocada em cada ativo, e a soma desses pesos deve ser igual a 1 (ou 100%).
+  A carteira de investimentos é modelada com base na alocação de pesos 𝑤𝑖 para cada ativo. Esses pesos representam a fração do capital alocada em cada ativo, e a soma desses pesos deve ser igual a 1 (ou 100%).
 
-Retorno Esperado da Carteira: O retorno da carteira é calculado como uma média ponderada dos retornos diários dos ativos, de acordo com os pesos alocados a cada ativo. Isso é feito pela operação de produto de matrizes entre a matriz de retornos e o vetor de alocação de pesos.
-                                            ![image](https://github.com/user-attachments/assets/5ff65ba3-ff69-4758-99f5-c65fc01bfae5)
+  .Retorno Esperado da Carteira: O retorno da carteira é calculado como uma média ponderada dos retornos diários dos ativos, de acordo com os pesos alocados a cada ativo. Isso é feito pela operação de produto     de matrizes entre a matriz de retornos e o vetor de alocação de pesos.
+  ![image](https://github.com/user-attachments/assets/5ff65ba3-ff69-4758-99f5-c65fc01bfae5)
 
-​
+  .Risco (Volatilidade) da Carteira: O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão       dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
+  ![image](https://github.com/user-attachments/assets/c1bee81a-2ad6-44c4-a5c4-494158d3ae62)
 
 
 ## Instruções de Instalação e Execução
