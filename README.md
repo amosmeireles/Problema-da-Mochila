@@ -51,7 +51,7 @@ Após a otimização, diferentes gráficos são gerados para permitir uma análi
   
 **Fronteira Eficiente:** Um gráfico que mostra a relação entre o retorno esperado e o risco para diferentes combinações de ativos, destacando as carteiras mais eficientes para cada nível de risco.
 
- **Codigo utilizado para fazer o grafico de Distribuição de Ativos:** 
+ **Codigo utilizado para fazer o grafico de Fronteira Eficiente:** 
 
 ![image](https://github.com/user-attachments/assets/94582352-af2e-4d21-a8c4-96a503cb2cbf)
 
