@@ -50,7 +50,11 @@ Para isso, o algoritmo de otimização é implementado usando a função minimiz
 Após a otimização, diferentes gráficos são gerados para permitir uma análise visual clara dos resultados da carteira otimizada:
   
 **Fronteira Eficiente:** Um gráfico que mostra a relação entre o retorno esperado e o risco para diferentes combinações de ativos, destacando as carteiras mais eficientes para cada nível de risco.
-  
+ 
+ **Resultado do grafico Fronteira Eficiente apresentado pelo codigo funcionando:**
+
+![image](https://github.com/user-attachments/assets/a071408b-1047-4eff-b5e7-7791c9956a80)
+
 **Distribuição de Ativos:** Um gráfico de pizza (ou barras) exibe a proporção alocada em cada ativo, com base nos pesos calculados pelo algoritmo de otimização.
   
 **Evolução do Retorno e Risco:** A evolução dos retornos e do risco da carteira é mostrada em um gráfico de linha. Isso inclui:
