@@ -118,4 +118,5 @@ Se desejar realizar alterações no código ou ajustar parâmetros, como a lista
   
 ## Dicas
 **Salvar uma Cópia:** Para salvar uma cópia do notebook com suas alterações, vá em Arquivo > Salvar uma cópia no Drive, assim você poderá manter suas mudanças no seu próprio Google Drive.
+
 **Download do Notebook:** Você também pode baixar o notebook como um arquivo .ipynb para rodá-lo localmente, caso tenha um ambiente Python configurado em sua máquina.
