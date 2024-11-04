@@ -42,10 +42,10 @@ A carteira de investimentos é construída no envelope cônico pela ponderação
 ![image](https://github.com/user-attachments/assets/c1bee81a-2ad6-44c4-a5c4-494158d3ae62)
 
 **4. Função de Otimização**
-A otimização da carteira tem como objetivo encontrar a combinação de pesos 𝑤𝑖 que maximiza o retorno esperado, enquanto respeita a restrição de risco (volatilidade máxima).
-Para isso, o algoritmo de otimização é implementado usando a função minimize() da biblioteca scipy.optimize. Esta função busca minimizar o risco da carteira dado um nível de retorno esperado, ou vice-versa.
-  
-**Função Objetivo:** A função objetivo pode ser definida para maximizar o retorno ou minimizar o risco da carteira, utilizando o produto entre os retornos diários e a alocação de pesos para calcular o retorno   esperado e a volatilidade da carteira.
+
+O objetivo da otimização do portfólio é encontrar a combinação apropriada de pesos para atingir o máximo retorno esperado possível, sujeito a uma restrição de risco (volatilidade máxima). Para isso, o algoritmo de otimização é realizado usando a função minimize() da biblioteca scipy.optimize. Essa função minimiza o nível de risco de um portfólio em um determinado retorno esperado ou vice-versa.
+
+**Função Objetivo:** A função objetivo pode ser expressa para maximizar o retorno ou minimizar o risco da carteira, tomando o produto dos retornos diários e os pesos alocados para encontrar o retorno esperado e o risco da carteira.
 
 **5. Visualização dos Resultados**
 Após a otimização, diferentes gráficos são gerados para permitir uma análise visual clara dos resultados da carteira otimizada:
