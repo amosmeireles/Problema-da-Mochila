@@ -48,11 +48,12 @@ O objetivo da otimização do portfólio é encontrar a combinação apropriada 
 **Função Objetivo:** A função objetivo pode ser expressa para maximizar o retorno ou minimizar o risco da carteira, tomando o produto dos retornos diários e os pesos alocados para encontrar o retorno esperado e o risco da carteira.
 
 **5. Visualização dos Resultados**
-Após a otimização, diferentes gráficos são gerados para permitir uma análise visual clara dos resultados da carteira otimizada:
-  
-**Fronteira Eficiente:** Um gráfico que mostra a relação entre o retorno esperado e o risco para diferentes combinações de ativos, destacando as carteiras mais eficientes para cada nível de risco.
 
- **Codigo utilizado para fazer o grafico de Fronteira Eficiente:** 
+Após a otimização dos portfólios, vários gráficos são produzidos de forma a fornecer uma representação clara e visual do resultado do portfólio otimizado:
+
+**Fronteira Eficiente:** Um gráfico que descreve a compensação entre retornos esperados e risco para vários portfólios, enfatizando o conjunto eficiente de portfólios para cada nível de risco.
+
+**Código usado com detalhes e explicações para os conceitos estatísticos e o processo de criação de gráficos:**
 
 ![image](https://github.com/user-attachments/assets/94582352-af2e-4d21-a8c4-96a503cb2cbf)
 
