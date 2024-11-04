@@ -34,6 +34,7 @@ Os dados de ativos financeiros são obtidos da API do Yahoo Finance usando a bib
 A carteira de investimentos é construída no envelope cônico pela ponderação de seus ativos Wi. Esses pesos, denotando a fração do capital investido, devem somar um (1).
 
 **Retorno esperado da carteira:** O retorno da carteira é estimado como sendo a média ponderada dos retornos diários dos ativos ao longo do período, considerando os pesos atribuídos a cada ativo. Isso é obtido por meio do procedimento de multiplicação de matrizes entre a matriz de retorno e o vetor de alocação de peso.
+
 ![image](https://github.com/user-attachments/assets/5ff65ba3-ff69-4758-99f5-c65fc01bfae5)
 
 **Risco (Volatilidade) da Carteira:** O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão    dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
