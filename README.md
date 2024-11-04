@@ -14,7 +14,11 @@ Ativos como itens: Cada ativo financeiro, ações, fundos mútuos e assim por di
 
 Retorno esperado: Isso é semelhante ao valor do objeto em um problema de mochila, que é o lucro que o ativo traz para a carteira.
 
-Risco (Volatilidade): Isso é semelhante ao peso
+Risco (Volatilidade): Isso é semelhante ao peso do objeto. O risco expressa o grau de imprevisibilidade de quanto lucro ou prejuízo esse ativo irá gerar; Nesse caso, isso foi avaliado por fatores externos usando um método chamado volatilidade.
+
+Capacidade da Mochila (Taxa de Risco): O limite de risco é caracterizado pelo peso máximo da volatilidade que pode ser tolerado pela carteira de ativos. Isso é semelhante ao problema da mochila clássica carregando a capacidade máxima de peso considerada. Esse limite pode variar dependendo de quanto risco um investidor está disposto a correr.
+
+Objetivo da Otimização: O retorno total da carteira de investimentos deve ser maximizado sujeito a uma restrição de risco, que em termos básicos pode ser formulada matematicamente.
 
 ![image](https://github.com/user-attachments/assets/b587e2b9-af7f-41f1-83b0-78ca5396c92a)
 
