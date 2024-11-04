@@ -61,9 +61,9 @@ Após a otimização dos portfólios, vários gráficos são produzidos de forma
 
 ![image](https://github.com/user-attachments/assets/a071408b-1047-4eff-b5e7-7791c9956a80)
 
-**Distribuição de Ativos:** Um gráfico de pizza (ou barras) exibe a proporção alocada em cada ativo, com base nos pesos calculados pelo algoritmo de otimização.
+**Alocação de ativos:** Um gráfico de pizza (ou barra) exibe a proporção alocada em cada ativo com base nos pesos calculados pelo algoritmo de otimização.
 
- **Codigo utilizado para fazer o grafico de Distribuição de Ativos:** 
+**Código de exemplo usado para gerar o Gráfico de Alocação de Ativos:**
 
 ![image](https://github.com/user-attachments/assets/6ffe89ba-a086-4759-82cc-c72ba31df2ef)
 
@@ -72,12 +72,13 @@ Após a otimização dos portfólios, vários gráficos são produzidos de forma
   ![image](https://github.com/user-attachments/assets/68230884-8127-499d-b6b2-4c1c905c4181)
 
   
-**Evolução do Retorno e Risco:** A evolução dos retornos e do risco da carteira é mostrada em um gráfico de linha. Isso inclui:
-  
-**Retorno Cumulativo:** Calculado com base no crescimento dos retornos da carteira ao longo do tempo.
-**Volatilidade Rolante:** A volatilidade (risco) da carteira é calculada para janelas móveis de 21 dias, permitindo observar como o risco varia ao longo do tempo.
+**Evolução de Retorno e Risco**: A variação dos retornos e do risco da carteira é representada em um gráfico de linhas. Isso inclui:
 
- **Codigo utilizado para fazer o grafico de Evolução do Retorno e Risco:** 
+**Retorno Cumulativo:** Isso é determinado a partir do aumento nos retornos da carteira durante um período específico de ano para ano. 
+
+**Volatilidade Contínua:** A volatilidade (Risco) da carteira Ipumi é calculada para o período contínuo de 21 dias para que o risco possa ser analisado a tempo.
+
+** Código utilizado para desenhar o Gráfico de Evolução de Retorno e Risco:**
 
 ![image](https://github.com/user-attachments/assets/b3a1e088-8501-4844-bb51-bb0583cba492)
 
