@@ -8,31 +8,30 @@ Este projeto tem como objetivo a implementação de um algoritmo de otimização
 
 **1. Modelagem Matemática**
 
-A modelagem consiste nas seguintes etapas:
+**A modelagem consiste nas seguintes etapas:**
 
-Ativos como itens: Cada ativo financeiro, ações, fundos mútuos e assim por diante, é tratado como um objeto no problema da mochila. Existem duas características principais do ativo:
+**Ativos como itens:** Cada ativo financeiro, ações, fundos mútuos e assim por diante, é tratado como um objeto no problema da mochila. Existem duas características principais do ativo:
 
-Retorno esperado: Isso é semelhante ao valor do objeto em um problema de mochila, que é o lucro que o ativo traz para a carteira.
+**Retorno esperado:** Isso é semelhante ao valor do objeto em um problema de mochila, que é o lucro que o ativo traz para a carteira.
 
-Risco (Volatilidade): Isso é semelhante ao peso do objeto. O risco expressa o grau de imprevisibilidade de quanto lucro ou prejuízo esse ativo irá gerar; Nesse caso, isso foi avaliado por fatores externos usando um método chamado volatilidade.
+**Risco (Volatilidade):** Isso é semelhante ao peso do objeto. O risco expressa o grau de imprevisibilidade de quanto lucro ou prejuízo esse ativo irá gerar; Nesse caso, isso foi avaliado por fatores externos usando um método chamado volatilidade.
 
-Capacidade da Mochila (Taxa de Risco): O limite de risco é caracterizado pelo peso máximo da volatilidade que pode ser tolerado pela carteira de ativos. Isso é semelhante ao problema da mochila clássica carregando a capacidade máxima de peso considerada. Esse limite pode variar dependendo de quanto risco um investidor está disposto a correr.
+**Capacidade da Mochila (Taxa de Risco):** O limite de risco é caracterizado pelo peso máximo da volatilidade que pode ser tolerado pela carteira de ativos. Isso é semelhante ao problema da mochila clássica carregando a capacidade máxima de peso considerada. Esse limite pode variar dependendo de quanto risco um investidor está disposto a correr.
 
-Objetivo da Otimização: O retorno total da carteira de investimentos deve ser maximizado sujeito a uma restrição de risco, que em termos básicos pode ser formulada matematicamente.
+**Objetivo da Otimização:** O retorno total da carteira de investimentos deve ser maximizado sujeito a uma restrição de risco, que em termos básicos pode ser formulada matematicamente.
 
 ![image](https://github.com/user-attachments/assets/b587e2b9-af7f-41f1-83b0-78ca5396c92a)
 
 
 **2. Dados e Retornos**
-Os dados dos ativos financeiros são coletados via a API do Yahoo Finanças usando a biblioteca yfinance. Esses dados incluem o preço histórico dos ativos selecionados, que são necessários para  calcular os retornos.
+Os dados de ativos financeiros são obtidos da API do Yahoo Finance usando a biblioteca yfinance. Esses dados incorporam preços históricos para os ativos selecionados, necessários para calcular os retornos.
 
-**Cálculo dos Retornos Diários:** A variação percentual do preço dos ativos entre os dias consecutivos foi calculada para determinar os retornos diários. Isso é feito com a função pct_change() da biblioteca      pandas, que calcula a variação percentual entre valores consecutivos de uma série.
+**Cálculo dos retornos diários:** Os retornos diários foram determinados calculando a variação percentual no preço dos ativos por dias consecutivos. Isso é obtido usando a função pct_change() da biblioteca pandas, que calcula a variação percentual entre n observações consecutivas de uma série.
 
-**3. Modelagem da Carteira**
-A carteira de investimentos é modelada com base na alocação de pesos 𝑤𝑖 para cada ativo. Esses pesos representam a fração do capital alocada em cada ativo, e a soma desses pesos deve ser igual a 1 (ou 100%).
+**3. Modelagem de Portfólio**
+A carteira de investimentos é construída no envelope cônico pela ponderação de seus ativos Wi. Esses pesos, denotando a fração do capital investido, devem somar um (1).
 
-**Retorno Esperado da Carteira:** O retorno da carteira é calculado como uma média ponderada dos retornos diários dos ativos, de acordo com os pesos alocados a cada ativo. Isso é feito pela operação de produto  de matrizes entre a matriz de retornos e o vetor de alocação de pesos.
-
+**Retorno esperado da carteira:** O retorno da carteira é estimado como sendo a média ponderada dos retornos diários dos ativos ao longo do período, considerando os pesos atribuídos a cada ativo. Isso é obtido por meio do procedimento de multiplicação de matrizes entre a matriz de retorno e o vetor de alocação de peso.
 ![image](https://github.com/user-attachments/assets/5ff65ba3-ff69-4758-99f5-c65fc01bfae5)
 
 **Risco (Volatilidade) da Carteira:** O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão    dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
