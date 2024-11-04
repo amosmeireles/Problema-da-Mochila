@@ -2,24 +2,19 @@
 # Codigo da turma: 962-94349
 # Nome: Amós Meireles Diniz, Matricula: 2021101198
 # Objetivo do Trabalho
-Este projeto tem como objetivo implementar um algoritmo de otimização para construção de uma carteira de investimentos baseado no problema da mochila. O objetivo principal é maximizar o retorno esperado de   uma carteira de ativos financeiros, respeitando um limite de risco aceitável (equivalente à capacidade da mochila).
-A otimização utiliza a volatilidade como modelo de medição de risco de forma a selecionar os melhores ativos que otimizam a relação risco-retorno.
+Este projeto tem como objetivo a implementação de um algoritmo de otimização para a construção de uma carteira de investimentos usando o problema da mochila. O objetivo central é a maximização do retorno esperado de uma carteira de ativos financeiros, dada uma certa aversão ao risco aceitável (que é considerada como a capacidade da mochila). O processo de otimização emprega a volatilidade como medida de risco para escolher os melhores títulos que fornecem o maior trade-off risco-retorno.
   
-## Abordagem Utilizada para a Otimização
+## Método adotado para o problema considerado
 
 **1. Modelagem Matemática**
 
-**A modelagem segue os seguintes passos:**
+A modelagem consiste nas seguintes etapas:
 
-**Itens como Ativos Financeiros:** Cada ativo financeiro (ação, fundo, etc.) é tratado como um item no problema da mochila. Os dois principais atributos do ativo são:
+Ativos como itens: Cada ativo financeiro, ações, fundos mútuos e assim por diante, é tratado como um objeto no problema da mochila. Existem duas características principais do ativo:
 
-**Retorno Esperado:** Equivalente ao valor do item no problema da mochila, que é o benefício que o ativo traz para a carteira.
+Retorno esperado: Isso é semelhante ao valor do objeto em um problema de mochila, que é o lucro que o ativo traz para a carteira.
 
-**Risco (Volatilidade):** Análogo ao peso do item. O risco representa a incerteza associada ao retorno desse ativo. Foi medido utilizando a volatilidade.
-
-**Capacidade da Mochila (Limite de Risco):** O limite de risco é definido pela volatilidade máxima que a carteira pode assumir. Isso é equivalente à capacidade máxima da mochila no problema clássico. Esse valor pode ser ajustado de acordo com o perfil de risco do investidor.
-
-**Objetivo de Otimização:** O objetivo é maximizar o retorno total da carteira enquanto se respeita a restrição de risco. A formulação matemática básica é a seguinte:
+Risco (Volatilidade): Isso é semelhante ao peso
 
 ![image](https://github.com/user-attachments/assets/b587e2b9-af7f-41f1-83b0-78ca5396c92a)
 
