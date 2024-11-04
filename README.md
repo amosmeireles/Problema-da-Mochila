@@ -37,7 +37,7 @@ A carteira de investimentos é construída no envelope cônico pela ponderação
 
 ![image](https://github.com/user-attachments/assets/5ff65ba3-ff69-4758-99f5-c65fc01bfae5)
 
-**Risco (Volatilidade) da Carteira:** O risco da carteira é medido pela volatilidade anualizada, que é calculada com base na volatilidade dos retornos diários. A volatilidade é calculada como o desvio-padrão    dos retornos multiplicado pela raiz de 252 (número de dias úteis em um ano).
+**Risco (Volatilidade) da Carteira:** O risco de uma carteira é definido em termos de volatilidade anualizada, que é determinada a partir da volatilidade dos retornos diários. A volatilidade é definida como o desvio padrão dos retornos ajustados para a raiz quadrada de 252, que representa o número de dias de negociação em um ano.
 
 ![image](https://github.com/user-attachments/assets/c1bee81a-2ad6-44c4-a5c4-494158d3ae62)
 
