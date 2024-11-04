@@ -87,7 +87,7 @@ Após a otimização dos portfólios, vários gráficos são produzidos de forma
 ![image](https://github.com/user-attachments/assets/227f85b4-1664-4146-a12f-8149a06428f3)
 
 ## Instruções de Instalação e Execução
-Este projeto foi desenvolvido utilizando o Google Colab, uma plataforma online gratuita que permite a execução de código Python em notebooks de forma interativa. Abaixo estão os passos detalhados para abrir  e executar o código:
+Este projeto foi desenvolvido utilizando o Google Colab, uma plataforma online que permite a execução de código Python. Abaixo estão os passos detalhados para abrir  e executar o código:
 
 **Passos para Acessar o Projeto:**
 
