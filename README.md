@@ -24,11 +24,13 @@ Este projeto tem como objetivo a implementação de um algoritmo de otimização
 
 
 **2. Dados e Retornos**
+
 Os dados de ativos financeiros são obtidos da API do Yahoo Finance usando a biblioteca yfinance. Esses dados incorporam preços históricos para os ativos selecionados, necessários para calcular os retornos.
 
 **Cálculo dos retornos diários:** Os retornos diários foram determinados calculando a variação percentual no preço dos ativos por dias consecutivos. Isso é obtido usando a função pct_change() da biblioteca pandas, que calcula a variação percentual entre n observações consecutivas de uma série.
 
 **3. Modelagem de Portfólio**
+
 A carteira de investimentos é construída no envelope cônico pela ponderação de seus ativos Wi. Esses pesos, denotando a fração do capital investido, devem somar um (1).
 
 **Retorno esperado da carteira:** O retorno da carteira é estimado como sendo a média ponderada dos retornos diários dos ativos ao longo do período, considerando os pesos atribuídos a cada ativo. Isso é obtido por meio do procedimento de multiplicação de matrizes entre a matriz de retorno e o vetor de alocação de peso.
